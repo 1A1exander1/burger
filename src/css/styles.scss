@@ -1,0 +1,37 @@
+@import "smart-grid";
+@import "media";
+@import "fonts";
+@import "variables";
+@import "header";
+@import "content";
+@import "footer";
+
+
+/*.degubGrid{
+   @include debug(rgba(0, 0, 0, 0.4), 1px solid #ff0);
+}*/
+*{
+	
+	box-sizing: border-box;
+	@include reset();
+}
+html,
+body{
+	color: red;
+	font-size: 12px;
+	height: 100%;
+	font-family: 'MuseoSansCyrl';
+	
+	
+}
+@include lg-block(){
+	body.lock{
+		overflow: hidden;
+	}
+}
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
